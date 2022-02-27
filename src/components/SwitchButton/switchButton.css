@@ -1,0 +1,78 @@
+.switch__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.switch__wrapper label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-color-secondary);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4.8rem;
+  height: 2.4rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(var(--background-switch), var(--background-switch-second));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.8rem;
+  width: 1.8rem;
+  left: 0.3rem;
+  bottom: 50%;
+  transform: translateY(50%);
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(4.8rem);
+  -ms-transform: translateX(4.8rem);
+  transform: translate(2.4rem, 50%);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 3.4rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+@media (min-width: 1024px) {
+  .slider:hover {
+    background-image: linear-gradient(hsl(146, 68%, 55%), hsl(210, 78%, 56%));
+  }
+}

@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+.app {
+  /* Default theme (Light Mode) */
+  --text-color-primary: hsl(230, 17%, 14%);
+  --text-color-secondary: hsl(228, 12%, 44%);
+  --top-background: hsl(225, 100%, 98%);
+  --card-background: hsl(227, 47%, 96%);
+  --background: hsl(0, 0%, 95%);
+
+  /* Switch colors */
+  --background-switch: hsl(230, 22%, 74%);
+  --background-switch-second: hsl(230, 22%, 74%);
+
+  /* Sucess and failure texts */
+  --success-text: hsl(163, 72%, 41%);
+  --fail-text: hsl(356, 69%, 56%);
+
+  /* Icon colors */
+  --Facebook: hsl(208, 92%, 53%);
+  --Twitter: hsl(203, 89%, 53%);
+  --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --YouTube: hsl(348, 97%, 39%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app.dark-theme {
+  /* Dark theme */
+  --text-color-primary: hsl(0, 0%, 100%);
+  --text-color-secondary: hsl(228, 34%, 66%);
+  --top-background: hsl(232, 19%, 15%);
+  --background: hsl(230, 17%, 14%);
+  --card-background: hsl(228, 28%, 20%);
+
+  /* Switch colors */
+  --background-switch: hsl(146, 68%, 55%);
+  --background-switch-second: hsl(210, 78%, 56%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  height: 100%;
+  display: grid;
+  grid-template-rows: minmax(23.5rem, 24.4rem) 1fr;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app__top-background {
+  padding-top: 3.6rem;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  background-color: var(--top-background);
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app__template {
+  padding: 0 2.4rem;
 }
