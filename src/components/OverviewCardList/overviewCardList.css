@@ -1,0 +1,6 @@
+.overview-card-list {
+  position: relative;
+  top: -4.4rem;
+  display: grid;
+  gap: 2.4rem;
+}
