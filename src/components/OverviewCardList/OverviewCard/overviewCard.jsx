@@ -25,14 +25,16 @@ function OverviewCard({ card }) {
   }
   return (
     <div className="overview-card">
-      <div className="overview-card__top-background"></div>
+      <div className={"overview-card__top-background overview-card__top-background--" + card.mediaIcon}></div>
       <div className="overview-card__content">
         <div className="overview-card__title">
           <MediaIconComponent />
           <span>{card.username}</span>
         </div>
         <div className="overview-card__information">
-          <span className="overview-card__value">{card.value}</span>
+          <span className="overview-card__value">
+            {card.value >= 10000 ? card.value.toString().substr(0, 2) + "K" : card.value}
+          </span>
           <span className="overview-card__description">{card.valueType.toUpperCase()}</span>
         </div>
         <div

@@ -33,3 +33,13 @@
   height: 0.1rem;
   background: hsl(228, 25%, 27%);
 }
+
+@media (min-width: 1440px) {
+  .header__divider {
+    display: none;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+}

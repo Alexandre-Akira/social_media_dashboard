@@ -1,14 +1,29 @@
 .overview-card {
   display: grid;
   grid-template-rows: 0.4rem 21.6rem;
+  width: 28.6rem;
+  margin: 0 auto;
+  cursor: pointer;
 }
 
 .overview-card__top-background {
-  background: var(--facebook);
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
-  width: 28.6rem;
+  width: 100%;
   justify-self: center;
+}
+
+.overview-card__top-background--facebook {
+  background: var(--facebook);
+}
+.overview-card__top-background--instagram {
+  background-image: linear-gradient(to right, var(--instagram));
+}
+.overview-card__top-background--twitter {
+  background: var(--twitter);
+}
+.overview-card__top-background--youtube {
+  background: var(--youtube);
 }
 
 .overview-card__content {
@@ -21,9 +36,12 @@
   justify-content: space-between;
   padding: 2.4rem 0;
   justify-self: center;
-  width: 28.6rem;
+  width: 100%;
 }
 
+.overview-card__content:hover {
+  background-color: var(--card-background-hover);
+}
 .overview-card__title {
   display: flex;
   align-items: center;
@@ -69,4 +87,10 @@
 
 .overview-card__today--failure {
   color: var(--fail-text);
+}
+
+@media (min-width: 1440px) {
+  .overview-card {
+    width: 25.5rem;
+  }
 }

@@ -1,0 +1,44 @@
+.daily-overview-card-list__cards {
+  display: grid;
+  gap: 2.4rem;
+  justify-items: center;
+  padding-bottom: 3.6rem;
+}
+
+.daily-overview-card-list__title {
+  font-size: 2.4rem;
+  line-height: 2.905rem;
+  font-weight: 700;
+  color: var(--text-color-primary);
+  width: 286px;
+  margin: 0 auto 2.7rem;
+}
+
+@media (min-width: 768px) {
+  .daily-overview-card-list__cards {
+    max-width: 59.6rem;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .daily-overview-card-list__title {
+    width: 59.6rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .daily-overview-card-list {
+    position: relative;
+    top: -5.4rem;
+  }
+  .daily-overview-card-list__cards {
+    max-width: 111rem;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+  }
+
+  .daily-overview-card-list__title {
+    width: 111rem;
+  }
+}

@@ -4,3 +4,20 @@
   display: grid;
   gap: 2.4rem;
 }
+
+@media (min-width: 768px) {
+  .overview-card-list {
+    max-width: 59.6rem;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1440px) {
+  .overview-card-list {
+    top: -10.8rem;
+    max-width: 111rem;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
