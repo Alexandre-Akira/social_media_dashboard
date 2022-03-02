@@ -7,7 +7,7 @@ function App() {
   let cards = [
     { mediaIcon: "facebook", username: "@nathanf", value: 1987, valueType: "followers", todayVariation: 12 },
     { mediaIcon: "twitter", username: "@nathanf", value: 1044, valueType: "followers", todayVariation: 99 },
-    { mediaIcon: "instagram", username: "@realnathanf", value: 11000, valueType: "followers", todayVariation: 1099 },
+    { mediaIcon: "instagram", username: "@realnathanf", value: 11734, valueType: "followers", todayVariation: 1099 },
     { mediaIcon: "youtube", username: "Nathan F", value: 8239, valueType: "subscribers", todayVariation: -144 },
   ];
 
@@ -21,12 +21,17 @@ function App() {
     { mediaIcon: "youtube", title: "Likes", value: 107, variation: -19 },
     { mediaIcon: "youtube", title: "Total Views", value: 1407, variation: -144 },
   ];
-  let total = 23004;
+
+  let total = cards.reduce((total, card) => total + card.value, 0);
+
   return (
     <div className="app">
       <div className="app__top-background">
         <div className="app__template">
-          <Header title="Social Media Dashboard" subtitle={"Total Followers: " + total} />
+          <Header
+            title="Social Media Dashboard"
+            subtitle={"Total Followers: " + new Intl.NumberFormat("en-IN").format(total)}
+          />
         </div>
       </div>
       <div className="app__background">

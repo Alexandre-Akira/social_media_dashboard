@@ -45,15 +45,11 @@
   transform: translateY(50%);
   background-color: var(--top-background);
   -webkit-transition: 0.4s;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+label {
+  transition: 0.4s;
 }
 
 input:checked + .slider:before {
