@@ -36,8 +36,6 @@ Users should be able to:
 
 - Solution URL: [Social Media Dashboard](https://Alexandre-Akira.github.io/social_media_dashboard)
 
-## My process
-
 ### Built with
 
 - Semantic HTML5 markup
